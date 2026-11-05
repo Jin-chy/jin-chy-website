@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- Makes the page scale correctly on phones -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Changye Jin | Portfolio</title>
+  <meta name="description" content="Changye Jin, Information Technology & Management student at the University at Buffalo. Data analysis, IT, and cybersecurity.">
+
+  <!-- Open Graph tags: control the preview when the link is shared (LinkedIn, iMessage, etc.) -->
+  <meta property="og:title" content="Changye Jin | Portfolio">
+  <meta property="og:description" content="IT & Management student at UB focused on data analysis, IT, and cybersecurity.">
+  <meta property="og:type" content="website">
+
+  <!-- Simple emoji favicon so the browser tab has an icon (no image file needed) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230474C4'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>CJ</text></svg>">
+
+  <!-- Font: Inter from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Apply the saved theme BEFORE the page draws, so it doesn't flash the wrong colors -->
+  <script>
+    try {
+      var saved = localStorage.getItem("theme");
+      if (saved === "light" || saved === "dark") document.documentElement.setAttribute("data-theme", saved);
+    } catch (e) { /* storage blocked: just follow the system setting */ }
+  </script>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Lets keyboard users jump past the menu -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main">
+      <a class="nav-logo" href="#top">Changye Jin</a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <button class="theme-toggle" id="theme-toggle" aria-label="Switch color theme" title="Switch light/dark">
+        <!-- Moon icon (shown in light mode) -->
+        <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <!-- Sun icon (shown in dark mode) -->
+        <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 1.5v2.5M12 20v2.5M1.5 12H4M20 12h2.5M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M4.6 19.4l1.8-1.8M17.6 6.4l1.8-1.8"/></g></svg>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero container" id="top">
+      <p class="eyebrow">Hi, I'm</p>
+      <h1>Changye Jin</h1>
+      <p class="hero-sub">
+        Information Technology &amp; Management student at the University at Buffalo,
+        focused on <strong>data analysis</strong>, <strong>IT systems</strong>, and <strong>cybersecurity</strong>.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="assets/resume.pdf" download>Download Resume</a>
+        <a class="btn btn-secondary" href="https://github.com/Jin-chy" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-secondary" href="#contact">Contact</a>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2>About</h2>
+        <div class="about-grid">
+          <div>
+            <p>
+              I'm a B.S. Information Technology &amp; Management student in UB's 4+1 MS in Management
+              Information Systems program, with a minor in Cybersecurity, graduating in May 2027.
+            </p>
+            <p>
+              I like turning messy data into clear decisions. I've built Power BI dashboards, organized
+              hundreds of project records, set up a CRM from scratch, and analyzed 100,000+ Spotify tracks in Python.
+            </p>
+            <!-- TODO: adjust this line to the roles you're targeting -->
+            <p class="looking-for"><strong>Looking for:</strong> internships and entry-level roles in data analysis, IT, and information systems.</p>
+          </div>
+
+          <dl class="facts card">
+            <div><dt>Education</dt><dd>University at Buffalo, SUNY<br>B.S. IT &amp; Management (4+1 MS MIS)<br>Cybersecurity Minor · Aug 2023 – May 2027</dd></div>
+            <div><dt>Coursework</dt><dd>Database Management Systems, Big Data Technologies, Network &amp; Cloud Infrastructure, Systems Security, Statistical Decisions in Management</dd></div>
+            <div><dt>Certifications</dt><dd>IBM Data Analyst (Coursera)<br>Intermediate SQL (DataCamp)</dd></div>
+            <div><dt>Awards</dt><dd>Dean's List × 4 semesters<br>UB Hackathon, 3rd place</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section section-alt" id="experience">
+      <div class="container">
+        <h2>Experience</h2>
+        <ol class="timeline">
+          <li class="timeline-item">
+            <div class="timeline-head">
+              <h3>Project Client Intern · <span>University at Buffalo</span></h3>
+              <span class="date">Aug 2026 – Present</span>
+            </div>
+            <ul>
+              <li>Helped build a nonprofit's CRM from scratch: 10 modules, 30+ custom fields, cutting administrative time by 30%.</li>
+              <li>Wrote data-entry and data-transfer guidelines, and coordinated a HIPAA Business Associate Agreement.</li>
+            </ul>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-head">
+              <h3>Data Management Intern · <span>Sevenson Environmental</span></h3>
+              <span class="date">May 2026 – Aug 2026</span>
+            </div>
+            <ul>
+              <li>Built an automated Power BI dashboard on dredging project status, helping cut startup time by 10%.</li>
+              <li>Standardized and migrated 300+ project records from 50+ project managers into a central SharePoint database.</li>
+              <li>Built a PTO system with automatic notifications, cutting coordination emails by 20%.</li>
+            </ul>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-head">
+              <h3>App Development &amp; Data Analyst Intern · <span>Cloud and Field Inc.</span></h3>
+              <span class="date">Jan 2026 – May 2026</span>
+            </div>
+            <ul>
+              <li>Analyzed U.S. farm density, activity, and injury data to identify target users and regions.</li>
+              <li>Designed the UI/UX of a mobile management app with React Native and SQLite.</li>
+            </ul>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-head">
+              <h3>Manager · <span>OG Dumpling House</span></h3>
+              <span class="date">Jul 2024 – Present</span>
+            </div>
+            <ul>
+              <li>Analyzed monthly inventory turnover and optimized restocking, reducing spending by 20%.</li>
+              <li>Led social media advertising, increasing customer traffic by 20%, and supervised a 10-person team.</li>
+            </ul>
+          </li>
+        </ol>
+
+        <!-- Impact chart: bars are built by script.js from the data list there -->
+        <div class="impact card">
+          <h3>Results by the numbers</h3>
+          <p class="muted">Measured improvements from my internships, job, and projects.</p>
+          <div class="chart" id="impact-chart" role="list" aria-label="Impact metrics"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section" id="skills">
+      <div class="container">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+          <div class="card">
+            <h3>Data &amp; Analysis</h3>
+            <ul class="tags">
+              <li>Python</li><li>Pandas</li><li>NumPy</li><li>Matplotlib</li><li>Seaborn</li>
+              <li>SQL</li><li>MySQL</li><li>Excel</li><li>Access</li><li>Power BI</li><li>Web Scraping</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Development</h3>
+            <ul class="tags">
+              <li>Java</li><li>HTML</li><li>CSS</li><li>JavaScript</li><li>React Native</li>
+              <li>SQLite</li><li>Next.js</li><li>Markdown</li><li>Git &amp; GitHub</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>IT &amp; Security</h3>
+            <ul class="tags">
+              <li>CRM Configuration</li><li>SharePoint</li><li>HIPAA / BAA</li>
+              <li>Systems Security</li><li>Cloud &amp; Networking</li><li>Local LLMs (Ollama)</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Professional</h3>
+            <ul class="tags">
+              <li>Team Leadership</li><li>Stakeholder Communication</li><li>Customer Service</li><li>Time Management</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <!-- To add a project: copy one <article class="project card"> block and edit it.
+         Status badge classes: status-done, status-progress, status-planned -->
+    <section class="section section-alt" id="projects">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+
+          <article class="project card">
+            <span class="status status-done">Completed</span>
+            <h3>Spotify Data Analysis</h3>
+            <dl class="case">
+              <div><dt>Question</dt><dd>Which audio features relate to a track's popularity across genres?</dd></div>
+              <div><dt>Data</dt><dd>100,000+ tracks across 100+ genres.</dd></div>
+              <div><dt>Method</dt><dd>Cleaned data in Pandas (missing values, duplicates, types), then ran correlation analysis with heatmaps and scatter plots.</dd></div>
+              <div><dt>Outcome</dt><dd>Mapped how audio features relate to popularity and listener mood across genres.</dd></div>
+            </dl>
+            <ul class="tags small"><li>Python</li><li>Pandas</li><li>NumPy</li><li>Matplotlib</li><li>Seaborn</li></ul>
+            <!-- TODO: replace # with your GitHub repo / notebook link -->
+            <a class="project-link" href="#" aria-disabled="true">Notebook link coming soon</a>
+          </article>
+
+          <article class="project card">
+            <span class="status status-done">Completed</span>
+            <h3>Personal AI Agent (OpenClaw)</h3>
+            <p>
+              A multi-agent AI system running a local Qwen3-8B model on a Mac mini. It's connected to
+              Gmail and Google Calendar to organize email and plan my day, and tracks portfolio research,
+              which cut research time by 20%. It includes a custom dashboard for monitoring the agents.
+            </p>
+            <ul class="tags small"><li>OpenClaw</li><li>Ollama</li><li>Next.js</li><li>Tailscale</li><li>JSON</li><li>Automation</li></ul>
+          </article>
+
+          <article class="project card">
+            <span class="status status-progress">In progress</span>
+            <h3>This Portfolio Website</h3>
+            <p>
+              This site, built by hand with plain HTML, CSS, and JavaScript. It has a light/dark theme,
+              a responsive layout, and a chart drawn without libraries. It's hosted on Vercel and redeploys on every Git push.
+            </p>
+            <ul class="tags small"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Git</li><li>Vercel</li></ul>
+            <a class="project-link" href="https://github.com/Jin-chy/jin-chy-website" target="_blank" rel="noopener">View source →</a>
+          </article>
+
+          <!-- TODO: replace this placeholder with a real future project -->
+          <article class="project card">
+            <span class="status status-planned">Planned</span>
+            <h3>Next Project (coming soon)</h3>
+            <p>
+              A new data project is being planned. Check back soon for the problem it tackles,
+              the data behind it, and what it finds.
+            </p>
+            <ul class="tags small"><li>SQL</li><li>Power BI</li></ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section" id="contact">
+      <div class="container contact">
+        <h2>Contact</h2>
+        <p>I'm open to internships and new opportunities. The best way to reach me is by email.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="mailto:changyej@buffalo.edu">changyej@buffalo.edu</a>
+          <!-- TODO: replace with your LinkedIn profile URL -->
+          <a class="btn btn-secondary" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn-secondary" href="https://github.com/Jin-chy" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© <span id="year">2026</span> Changye Jin · Built with HTML, CSS &amp; JavaScript</div>
+  </footer>
+
+  <!-- Loaded at the end so the HTML exists before the script runs -->
+  <script src="script.js"></script>
+</body>
+</html>

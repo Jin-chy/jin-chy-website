@@ -131,15 +131,6 @@ a, .btn, .theme-toggle { transition: color 0.15s, background-color 0.15s, border
 }
 .theme-toggle:hover { border-color: var(--primary); color: var(--primary); }
 
-/* Show the moon in light mode and the sun in dark mode */
-.icon-sun { display: none; }
-:root[data-theme="dark"] .icon-sun { display: block; }
-:root[data-theme="dark"] .icon-moon { display: none; }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .icon-sun { display: block; }
-  :root:not([data-theme="light"]) .icon-moon { display: none; }
-}
-
 /* Hamburger button: hidden on desktop */
 .nav-toggle { display: none; gap: 4px; align-content: center; }
 .nav-toggle span { display: block; width: 18px; height: 2px; background: currentColor; }
@@ -205,6 +196,7 @@ a, .btn, .theme-toggle { transition: color 0.15s, background-color 0.15s, border
 .facts { margin: 0; display: grid; gap: 16px; }
 .facts dt { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--primary); }
 .facts dd { margin: 2px 0 0; font-size: 0.95rem; }
+.facts .line { display: block; }
 
 /* Experience timeline */
 .timeline { list-style: none; margin: 0 0 40px; padding: 0 0 0 20px; border-left: 2px solid var(--border); }
@@ -222,7 +214,7 @@ a, .btn, .theme-toggle { transition: color 0.15s, background-color 0.15s, border
 .timeline-item li { margin-bottom: 4px; }
 
 /* Impact chart (bars created in script.js) */
-.chart { display: grid; gap: 14px; margin-top: 16px; }
+.chart { display: grid; gap: 14px; margin: 16px 0 0; padding: 0; list-style: none; }
 .chart-row { display: grid; grid-template-columns: 1fr; gap: 4px; }
 @media (min-width: 640px) { .chart-row { grid-template-columns: 240px 1fr; align-items: center; gap: 16px; } }
 .chart-label { font-size: 0.92rem; }
@@ -250,7 +242,7 @@ a, .btn, .theme-toggle { transition: color 0.15s, background-color 0.15s, border
 .project h3, .project p { margin: 0; }
 .project .tags { margin-top: auto; }   /* keeps tags aligned at the bottom of each card */
 .project-link { font-weight: 600; font-size: 0.92rem; }
-.project-link[aria-disabled="true"] { color: var(--text-muted); text-decoration: none; pointer-events: none; }
+span.project-link { font-weight: 500; }
 
 .status {
   align-self: flex-start;

@@ -1,31 +1,39 @@
 # Changye Jin — Personal Website
 
-A simple, single-page portfolio built with plain **HTML, CSS, and JavaScript**. It has no framework and no build step, and it's hosted on **Vercel**.
+A single-page portfolio built with **React** and **Vite**, hosted on **Vercel**.
 
-## Files
+## Project structure
 
-| File | What it does |
-|---|---|
-| `index.html` | All the content: hero, about, experience, skills, projects, contact |
-| `styles.css` | Look and layout. Colors are variables at the top (light and dark themes) |
-| `script.js` | Theme toggle, mobile menu, impact chart, footer year |
-| `assets/resume.pdf` | The resume behind the "Download Resume" button |
+```
+index.html              The HTML shell React draws into (plus meta tags)
+public/resume.pdf       Served as /resume.pdf ("Download Resume" button)
+src/
+  main.jsx              Entry point: starts React
+  App.jsx               The page, assembled from section components
+  data.js               ALL the text and content. Edit this file most often
+  styles.css            Colors (variables at the top) and layout
+  components/           One file per section: Header, Hero, About, Experience,
+                        ImpactChart, Skills, Projects, ProjectCard, Tags, Contact, Footer
+```
+
+## Run it on your computer
+
+```bash
+npm install      # first time only: downloads React and Vite into node_modules/
+npm run dev      # starts a local server at http://localhost:5173 that updates as you save
+```
 
 ## Editing
 
-- **Text:** edit `index.html` directly. Search for `TODO` to find placeholders (LinkedIn URL, Spotify notebook link, planned project).
-- **Add a project:** copy an `<article class="project card">…</article>` block in the Projects section. The status badge classes are `status-done`, `status-progress` and `status-planned`.
-- **Chart numbers:** edit the `impactData` list in `script.js`.
-- **Colors:** change the variables at the top of `styles.css`.
-- **Resume:** replace `assets/resume.pdf` with a new file of the same name.
-
-## Preview locally
-
-Open `index.html` in a browser (double-click it, or run `open index.html`).
+- **Text, jobs, skills, projects, chart numbers:** edit `src/data.js`. Search for `TODO` to find placeholders.
+- **Add a project:** add an object to the `projects` list in `src/data.js`. `status` can be `"done"`, `"progress"` or `"planned"`.
+- **Colors:** change the variables at the top of `src/styles.css`.
+- **Resume:** replace `public/resume.pdf` with a new file of the same name.
 
 ## Deploying
 
-The repo is connected to Vercel, so every `git push` to `main` redeploys the site automatically:
+Vercel detects Vite automatically: it runs `npm run build` and serves the `dist/` folder.
+Every `git push` to `main` redeploys:
 
 ```bash
 git add .

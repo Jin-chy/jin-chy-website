@@ -6,7 +6,7 @@
 
 export const profile = {
   name: "Changye Jin",
-  email: "changyej@buffalo.edu",
+  email: "jinchy05@gmail.com",
   github: "https://github.com/Jin-chy",
   linkedin: "https://www.linkedin.com/", // TODO: replace with your LinkedIn profile URL
   resume: "/resume.pdf", // file lives in public/resume.pdf
